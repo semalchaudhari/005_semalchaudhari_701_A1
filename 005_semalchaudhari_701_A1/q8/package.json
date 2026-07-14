@@ -1,0 +1,16 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "server": "node server.js",
+    "test": "node test.js",
+    "start": "node server.js",
+    "hello": "echo Hello User",
+    "info": "echo Node.js Application"
+  }
+}
