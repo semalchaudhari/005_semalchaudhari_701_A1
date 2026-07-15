@@ -5,26 +5,31 @@ fs.writeFile("demo.txt", "Hello Node.js\n", (err) => {
     if (err) throw err;
     console.log("File created.");
 
-    // Append data
-    fs.appendFile("demo.txt", "Welcome to FS Module.\n", (err) => {
+    fs.writeFile("demo1.txt", "Hello Node.js\n", (err) => {
         if (err) throw err;
-        console.log("Data appended.");
+        console.log("File created.");
 
-        // Read file
-        fs.readFile("demo.txt", "utf8", (err, data) => {
+        // Append data
+        fs.appendFile("demo.txt", "Welcome to FS Module.\n", (err) => {
             if (err) throw err;
-            console.log("File Content:");
-            console.log(data);
+            console.log("Data appended.");
 
-            // Rename file
-            fs.rename("demo.txt", "sample.txt", (err) => {
+            // Read file
+            fs.readFile("demo.txt", "utf8", (err, data) => {
                 if (err) throw err;
-                console.log("File renamed.");
+                console.log("File Content:");
+                console.log(data);
 
-                // Delete file
-                fs.unlink("sample.txt", (err) => {
+                // Rename file
+                fs.rename("demo.txt", "sample.txt", (err) => {
                     if (err) throw err;
-                    console.log("File deleted.");
+                    console.log("File renamed.");
+
+                    // Delete file
+                    fs.unlink("sample.txt", (err) => {
+                        if (err) throw err;
+                        console.log("File deleted.");
+                    });
                 });
             });
         });

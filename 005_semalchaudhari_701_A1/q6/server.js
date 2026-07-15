@@ -7,7 +7,7 @@ const util = require("util");
 const unlinkFile = util.promisify(fs.unlink);
 
 // Call the promisified function
-unlinkFile("demo.txt")
+unlinkFile("demo1.txt")
     .then(() => {
         console.log("File deleted successfully.");
     })

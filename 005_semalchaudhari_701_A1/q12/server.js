@@ -1,5 +1,5 @@
 function registerStudent() {
-    return Promise.resolve("Semal");
+    return Promise.resolve("jhon");
 }
 
 function assignRollNo(name) {
